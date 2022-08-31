@@ -81,6 +81,35 @@ SRC13=	13-main.c \
 	2-binary_tree_insert_right.c \
 	0-binary_tree_node.c
 
+TARGET14=14-balance
+SRC14=	14-binary_tree_balance.c \
+	14-main.c \
+	0-binary_tree_node.c \
+	2-binary_tree_insert_right.c \
+	1-binary_tree_insert_left.c
+
+TARGET15=15-full
+SRC15=	15-binary_tree_is_full.c \
+	15-main.c \
+	0-binary_tree_node.c \
+	2-binary_tree_insert_right.c
+
+TARGET16=16-perfect
+SRC16= 	16-binary_tree_is_perfect.c \
+	16-main.c \
+	0-binary_tree_node.c \
+	2-binary_tree_insert_right.c
+
+TARGET17=17-sibling
+SRC17= 	17-main.c \
+	17-binary_tree_sibling.c \
+	0-binary_tree_node.c
+
+TARGET18=18-uncle
+SRC18= 	18-main.c \
+	18-binary_tree_uncle.c \
+	0-binary_tree_node.c
+
 STDSRC= 0-binary_tree_node.c \
 	1-binary_tree_insert_left.c \
 	2-binary_tree_insert_right.c \
@@ -107,7 +136,8 @@ clean:
 	$(RM) *~ \#*\# \.\#* \
 		$(TARGET0) $(TARGET1) $(TARGET2) $(TARGET3) $(TARGET4) \
 		$(TARGET5) $(TARGET6) $(TARGET7) $(TARGET8) $(TARGET9) \
-		$(TARGET10) $(TARGET11) $(TARGET12) $(TARGET13)
+		$(TARGET10) $(TARGET11) $(TARGET12) $(TARGET13) $(TARGET14) \
+		$(TARGET15) $(TARGET16) $(TARGET17) $(TARGET18)
 
 re:		clean all
 
@@ -155,3 +185,18 @@ betty:
 
 13:
 	$(CC) $(CFLAGS) $(SRC) $(SRC13) -o $(TARGET13)
+
+14:
+	$(CC) $(CFLAGS) $(SRC) $(SRC14) -o $(TARGET14)
+
+15:
+	$(CC) $(CFLAGS) $(SRC) $(SRC15) -o $(TARGET15)
+
+16:
+	$(CC) $(CFLAGS) $(SRC) $(SRC16) -o $(TARGET16)
+
+17:
+	$(CC) $(CFLAGS) $(SRC) $(SRC17) -o $(TARGET17)
+
+18:
+	$(CC) $(CFLAGS) $(SRC) $(SRC18) -o $(TARGET18)
