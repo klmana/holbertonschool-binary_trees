@@ -67,8 +67,8 @@ int binary_tree_is_heap(const binary_tree_t *tree);
 heap_t *array_to_heap(int *array, size_t size);
 int heap_extract(heap_t **root);
 int *heap_to_sorted_array(heap_t *heap, size_t *size);
-int print_t(const binary_tree_t *tree, int offset, int depth, char **s);
-size_t _height(const binary_tree_t *tree);
+static int print_t(const binary_tree_t *tree, int offset, int depth, char **s);
+static size_t _height(const binary_tree_t *tree);
 void binary_tree_print(const binary_tree_t *tree);
 
 #endif
