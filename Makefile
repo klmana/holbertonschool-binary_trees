@@ -8,29 +8,29 @@ TARGET0=0-node
 SRC0=	0-main.c \
 	0-binary_tree_node.c
 
-TARGET1=1-node
+TARGET1=1-left
 SRC1=	1-main.c \
 	1-binary_tree_insert_left.c \
 	0-binary_tree_node.c
 
-TARGET2=2-node
+TARGET2=2-right
 SRC2=	2-main.c \
 	2-binary_tree_insert_right.c \
 	0-binary_tree_node.c
 
-TARGET3=3-node
+TARGET3=3-del
 SRC3=	3-main.c \
 	3-binary_tree_delete.c \
 	2-binary_tree_insert_right.c \
 	0-binary_tree_node.c
 
-TARGET4=4-node
+TARGET4=4-leaf
 SRC4=	4-main.c \
 	4-binary_tree_is_leaf.c \
 	2-binary_tree_insert_right.c \
 	0-binary_tree_node.c
 
-TARGET5=5-node
+TARGET5=5-root
 SRC5=	5-main.c \
 	5-binary_tree_is_root.c \
 	2-binary_tree_insert_right.c \
