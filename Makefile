@@ -8,29 +8,29 @@ TARGET0=0-node
 SRC0=	0-main.c \
 	0-binary_tree_node.c
 
-TARGET1=1-left
+TARGET1=1-node
 SRC1=	1-main.c \
 	1-binary_tree_insert_left.c \
 	0-binary_tree_node.c
 
-TARGET2=2-right
+TARGET2=2-node
 SRC2=	2-main.c \
 	2-binary_tree_insert_right.c \
 	0-binary_tree_node.c
 
-TARGET3=3-del
+TARGET3=3-node
 SRC3=	3-main.c \
 	3-binary_tree_delete.c \
 	2-binary_tree_insert_right.c \
 	0-binary_tree_node.c
 
-TARGET4=4-leaf
+TARGET4=4-node
 SRC4=	4-main.c \
 	4-binary_tree_is_leaf.c \
 	2-binary_tree_insert_right.c \
 	0-binary_tree_node.c
 
-TARGET5=5-root
+TARGET5=5-node
 SRC5=	5-main.c \
 	5-binary_tree_is_root.c \
 	2-binary_tree_insert_right.c \
@@ -110,6 +110,56 @@ SRC18= 	18-main.c \
 	18-binary_tree_uncle.c \
 	0-binary_tree_node.c
 
+TARGET19=100-ancestor
+SRC19=	100-main.c \
+	100-binary_trees_ancestor.c \
+	0-binary_tree_node.c
+
+TARGET20=101-lvl
+SRC20=	101-main.c \
+	101-binary_tree_levelorder.c \
+	0-binary_tree_node.c \
+	3-binary_tree_delete.c
+
+TARGET21=102-complete
+SRC21=	102-main.c \
+	102-binary_tree_is_complete.c \
+	0-binary_tree_node.c \
+	3-binary_tree_delete.c
+
+TARGET22=103-rotl
+SRC22=	103-binary_tree_rotate_left.c \
+	103-main.c \
+	0-binary_tree_node.c
+
+TARGET23=104-rotr
+SRC23=	104-binary_tree_rotate_right.c \
+	104-main.c \
+	0-binary_tree_node.c
+
+TARGET24=110-is_bst
+SRC24=	110-main.c \
+	110-binary_tree_is_bst.c \
+	0-binary_tree_node.c
+
+TARGET25=111-bst_insert
+SRC25=	111-bst_insert.c \
+	111-main.c \
+	0-binary_tree_node.c
+
+TARGET26=112-bst_array
+SRC26=	112-array_to_bst.c \
+	112-main.c \
+	111-bst_insert.c \
+	0-binary_tree_node.c
+
+TARGET27=113-bst_search
+SRC27=	113-bst_search.c \
+	113-main.c \
+	112-array_to_bst.c \
+	111-bst_insert.c \
+	0-binary_tree_node.c
+
 STDSRC= 0-binary_tree_node.c \
 	1-binary_tree_insert_left.c \
 	2-binary_tree_insert_right.c \
@@ -128,7 +178,16 @@ STDSRC= 0-binary_tree_node.c \
 	15-binary_tree_is_full.c \
 	16-binary_tree_is_perfect.c \
 	17-binary_tree_sibling.c \
-	18-binary_tree_uncle.c
+	18-binary_tree_uncle.c \
+	100-binary_trees_ancestor.c \
+	101-binary_tree_levelorder.c \
+	102-binary_tree_is_complete.c \
+	103-binary_tree_rotate_left.c \
+	104-binary_tree_rotate_right.c \
+	110-binary_tree_is_bst.c \
+	111-bst_insert.c \
+	112-array_to_bst.c \
+	113-bst_search.c
 
 all:	0 1 2 3 4 5 6 7 8 9 10 11 12 13
 
@@ -137,7 +196,9 @@ clean:
 		$(TARGET0) $(TARGET1) $(TARGET2) $(TARGET3) $(TARGET4) \
 		$(TARGET5) $(TARGET6) $(TARGET7) $(TARGET8) $(TARGET9) \
 		$(TARGET10) $(TARGET11) $(TARGET12) $(TARGET13) $(TARGET14) \
-		$(TARGET15) $(TARGET16) $(TARGET17) $(TARGET18)
+		$(TARGET15) $(TARGET16) $(TARGET17) $(TARGET18) $(TARGET19) \
+		$(TARGET20) $(TARGET21) $(TARGET22) $(TARGET23) $(TARGET24) \
+		$(TARGET25) $(TARGET26) $(TARGET27) $(TARGET28) $(TARGET29)
 
 re:		clean all
 
@@ -200,3 +261,27 @@ betty:
 
 18:
 	$(CC) $(CFLAGS) $(SRC) $(SRC18) -o $(TARGET18)
+
+19:
+	$(CC) $(CFLAGS) $(SRC) $(SRC19) -o $(TARGET19)
+
+20:
+	$(CC) $(CFLAGS) $(SRC) $(SRC20) -o $(TARGET20)
+
+21:
+	$(CC) $(CFLAGS) $(SRC) $(SRC21) -o $(TARGET21)
+
+22:
+	$(CC) $(CFLAGS) $(SRC) $(SRC22) -o $(TARGET22)
+
+23:
+	$(CC) $(CFLAGS) $(SRC) $(SRC23) -o $(TARGET23)
+
+24:
+	$(CC) $(CFLAGS) $(SRC) $(SRC24) -o $(TARGET24)
+
+25:
+	$(CC) $(CFLAGS) $(SRC) $(SRC25) -o $(TARGET25)
+
+26:
+	$(CC) $(CFLAGS) $(SRC) $(SRC26) -o $(TARGET26)
